@@ -7,6 +7,9 @@ const integralParabol = document.getElementById('content_parabol');
 const btnRectangle = document.getElementById('btn_rectangle');
 const btnTrap = document.getElementById('btn_trap');
 const btnParabol = document.getElementById('btn_parabol');
+const calculateTools =document.querySelector('.calculate__tools');
+const calculateList =document.querySelector('.calculate__list'); 
+
 // delete MAth
 function takeAwayMath(){
     let math_methods = Object.getOwnPropertyNames(Math);
@@ -94,7 +97,6 @@ const methodParabol = () => {
     let result = calculate(F,a,b,N);
     isNaN(result) ? integralParabol.innerHTML = "Ошибка!!!Проверьте ввод данных." : integralParabol.innerHTML = "Метод Симпсона: "+String(result.toPrecision(10));
 }
-
 
 btnTrap.addEventListener('click', methodTrap);
 btnRectangle.addEventListener('click',centralRectangle);
