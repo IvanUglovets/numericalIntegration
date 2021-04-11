@@ -1,0 +1,243 @@
+//variable
+$font1:'Open Sans', sans-serif;
+$font2:'Roboto', sans-serif;
+$font3:'Playfair Display', serif;
+$font4: sans-serif;
+$primary: #F7F7F7;
+//varaible-end
+@mixin submenu {
+    display: block;
+    text-decoration: none;
+    color: $primary;
+    font-family: $font1;
+    font-size: 20px;
+    color:$primary;
+    padding-top: 5px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font4;
+    
+}
+
+ul{
+    //list-style: none;
+    margin-left:  40px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+p{
+    
+    margin-bottom: 10px;
+    
+}
+
+img{
+    //position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+
+.header{
+    background-color: #4067b7;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    .header__inner{
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        .menu{
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            .menu__list{
+                display: flex;
+                justify-content:center;
+                align-items:center;
+                list-style: none;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                .header__logo-item{
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    color:$primary;
+                    margin-right: 20px;
+                    font-size: 20px;
+                    padding-top: 10px;
+                    
+                }
+                .header__logo-item::after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: 1px;
+                    background: $primary;
+                    opacity: 0;
+                    //opacity: 1;
+                    transition: opacity .3s linear;
+                }
+                .header__logo-item:hover::after{
+                    opacity: 1;
+                }
+                .header__logo-sub{
+                    position: relative;
+                }
+                .header__logo-subitem{
+                    @include submenu;
+                }
+                .submenu{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position:absolute;
+                    background-color: rgb(224, 219, 224);
+                    z-index:1000;
+                    opacity: 0;
+                   // display: none;
+                    .submenu__item{
+                        border: 1px solid black;
+                        text-align: center;
+                        min-width: 100px;
+                        .submenu__item-link{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: black;
+                            padding: 5px 10px;
+                            font-family: $font1;
+                            font-size: 16px;
+                            
+                        }
+                        .submenu__item-link:hover{
+                            color: $primary;
+                        }
+                        
+                    }
+                    .submenu__item:hover{
+                        background-color: rgb(46, 44, 44);
+                        transition: all 0.3s ease;
+                    }
+                }
+        
+                .header__logo-sub:hover .submenu{
+                    //display: block;
+                    opacity: 1;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+}
+
+
+.task__integration{
+    width: 100%;
+    padding-top: 50px;
+    .task__integration__inner{
+        .suptitle__integration{
+            font-weight: bold;
+        }
+        .geometric__img{
+            position: relative;
+            margin-bottom: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .geometric__title{
+                position: absolute;
+                bottom: -8px;
+                display: block;
+                
+                font-style: italic;
+                font-size: 12px;
+                
+            }
+        }
+        
+        .main__title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            .title__task{
+                font-family: $font2;
+                font-size: 28px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.navigation{
+    padding-top: 30px;
+    .navigation__menu{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        .footer__menu{
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            list-style: none;
+            .footer-item{
+                position: relative;
+                display: block;
+                text-decoration: none;
+                margin-right: 10px;
+                max-width: 130px;
+                text-align: center;
+                color: rgb(153, 177, 169);
+                
+            }
+            .footer-item::after{
+                content: '';
+                position: absolute;
+                display: block;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 1px;
+                background: red;
+                opacity: 0;
+                //opacity: 1;
+                transition: opacity .3s linear;
+            }
+            .footer-item:hover::after{
+                opacity: 1;
+            }
+            
+            .actim-method{
+                font-size:18px;
+                color: blue;
+            }
+        }
+    }
+}
+
+
+
+

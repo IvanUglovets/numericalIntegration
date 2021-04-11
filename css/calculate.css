@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #4067b7;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.header .header__inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header .header__inner .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header__inner .menu .menu__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .header__inner .menu .menu__list .header__logo-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #F7F7F7;
+  margin-right: 20px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.header .header__inner .menu .menu__list .header__logo-item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 1px;
+  background: #F7F7F7;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+.header .header__inner .menu .menu__list .header__logo-item:hover::after {
+  opacity: 1;
+}
+.header .header__inner .menu .menu__list .header__logo-sub {
+  position: relative;
+}
+.header .header__inner .menu .menu__list .header__logo-subitem {
+  display: block;
+  text-decoration: none;
+  color: #F7F7F7;
+  margin-right: 61px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #F7F7F7;
+  padding-top: 7px;
+}
+.header .header__inner .menu .menu__list .submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #e0dbe0;
+  z-index: 1000;
+  opacity: 0;
+}
+.header .header__inner .menu .menu__list .submenu .submenu__item {
+  border: 1px solid black;
+  text-align: center;
+  min-width: 164px;
+}
+.header .header__inner .menu .menu__list .submenu .submenu__item .submenu__item-link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 5px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+.header .header__inner .menu .menu__list .submenu .submenu__item .submenu__item-link:hover {
+  color: #F7F7F7;
+}
+.header .header__inner .menu .menu__list .submenu .submenu__item:hover {
+  background-color: #2e2c2c;
+  transition: all 0.3s ease;
+}
+.header .header__inner .menu .menu__list .header__logo-sub:hover .submenu {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.calculate {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: #e9e9f1;
+}
+.calculate .calculate__method-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.calculate .calculate__method-inner .calculate__tools {
+  font-style: italic;
+  font-size: 18px;
+}
+.calculate .calculate__method-inner .calculate__tools p {
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: orange;
+}
+.calculate .calculate__method {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.calculate .calculate__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.calculate .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  color: black;
+  margin-top: 20px;
+}
+.calculate .logo .intro__integral {
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+.calculate .logo .intro__integral::before {
+  content: "a";
+  position: absolute;
+  top: 55px;
+  font-size: 12px;
+  right: 10px;
+  color: black;
+}
+.calculate .logo .intro__integral::after {
+  content: "b";
+  position: absolute;
+  bottom: 60px;
+  font-size: 12px;
+  left: 10px;
+  color: black;
+}
+.calculate .logo .intro__function {
+  display: inline-block;
+  font-size: 25px;
+  text-align: center;
+  font-style: italic;
+}
+.calculate .input-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.calculate .input-block label {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+.calculate .input-block .input {
+  padding: 8px 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  background-color: #F7F7F7;
+  border: none;
+  border-radius: 2px;
+}
+.calculate .block-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculate .block-button .btn {
+  position: relative;
+  display: block;
+  color: #412626;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  border: 2px solid #ff7675;
+  padding: 4px 40px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  margin-right: 20px;
+}
+.calculate .block-button .btn::before {
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+.calculate .block-button .btn:hover {
+  cursor: pointer;
+  background: #81728f;
+  color: white;
+  font-size: 14px;
+}
+.calculate .result_integral {
+  position: relative;
+}
+.calculate .result_integral .result__title {
+  font-size: 24px;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+.calculate .result_integral .result__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.calculate .result_integral .wrapper__btn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 190px;
+}
+.calculate .result_integral .wrapper__btn .content_rectangle {
+  padding-top: 30px;
+  display: block;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  margin-right: 30px;
+  max-height: 200px;
+}
+.calculate .wrapper__chart-back {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+.calculate .wrapper__chart-back .btn__chart {
+  display: block;
+  width: 15%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  transition: all 0.6s ease;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-style: none;
+  border: 1px solid black;
+  text-decoration: none;
+}
+.calculate .wrapper__chart-back .btn__chart:hover {
+  cursor: pointer;
+  background-color: #81728f;
+  color: #F7F7F7;
+}
+.calculate .wrapper__chart-back .link-back {
+  display: block;
+  width: 15%;
+  text-decoration: none;
+  border: 1px solid black;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  text-align: center;
+  transition: all 0.6s ease;
+  margin-top: 20px;
+}
+.calculate .wrapper__chart-back .link-back:hover {
+  cursor: pointer;
+  background-color: #81728f;
+  color: #F7F7F7;
+}
+
+.chart {
+  width: 100%;
+  background-color: #e9e9f1;
+}
+.chart .chart__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.chart .myChart {
+  max-width: 1000px;
+  height: 200px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод трапеций</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/trap.css">
+    
+</head>
+<body>
+    <main class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li><a href="index.html" class="header__logo-item">На главную</a></li>
+                            <li><a href="calculate.html" class="header__logo-item">Расчет интеграла</a></li>
+                            <li class="header__logo-sub"><a href="#" class="header__logo-subitem">Демонстрация</a>
+                                <ul class="submenu">
+                                    <li class="submenu__item"><a href="rectDemo.html" class="submenu__item-link">Метод ЦП</a></li>
+                                    <li class="submenu__item"><a href="trapDemo.html" class="submenu__item-link">Метод Трапеций</a></li>
+                                    <li class="submenu__item"><a href="#" class="submenu__item-link">Метод Симпсона</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="trap__integration">
+            <div class="container">
+                <div class="trap__integration__inner">
+                    <div class="title_trap"><h2 class="trap__title-item">Метод трапеций</h2></div>
+                    <p>Если на частичном отрезке <img src="img/xjx.png" alt="" > подынтегральную функцию заменить полиномом Лагранжа первой степени:</p>
+                    <img src="img/trap_1.png" alt="">
+                    <p>то искомый интеграл на частичном отрезке запишется следующим образом:</p>
+                    <div class="img__trap"><img src="img/trap2.png" alt=""><span class="trap__number">(1)</span></div>
+                    <p>Тогда составная формула трапеций на всем отрезке интегрирования [a,b] примет вид:</p>
+                    <img src="img/trap3.png" alt="">
+                    <p>Графически метод трапеций представлен на рис. 1. Площадь криволинейной трапеции заменяется площадью многоугольника, составленного из N трапеций, при этом кривая заменяется вписанной в нее ломаной. На каждом из частичных отрезков функция аппроксимируется прямой, проходящей через конечные значения, при этом площадь трапеции на каждом отрезке определяется по формуле (1).</p>
+                    <p>Погрешность метода трапеций выше, чем у метода средних прямоугольников. Однако на практике найти среднее значение на элементарном интервале можно только у функций, заданных аналитически (а не таблично), поэтому использовать метод средних прямоугольников удается далеко не всегда.</p>
+                    <div class="chart__trap"><img src="img/img_trap.png" alt=""><span>Рис. 1. Интегрирование методом методом трапеций</span></div>
+                </div>
+            </div>
+        </section>  
+
+        <footer class="navigation">
+            <div class="container">
+                <nav class="navigation__menu">
+                    <ul class="footer__menu">
+                        <li><a href="about.html" class="footer-item">Задача Ч.И.</a></li>
+                        <li><a href="rectangle.html" class="footer-item">Метод ЦП</a></li>
+                        <li><a href="trap.html" class="footer-item actim-method">Метод трапеций</a></li>
+                        <li><a href="parabol.html" class="footer-item">Метод Симпсона</a></li>
+                    </ul>
+                </nav>
+            </div>
+        <footer>
+    </main>
+</body>
+</html>

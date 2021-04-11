@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теория и формулы</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <main class="page">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li><a href="index.html" class="header__logo-item">На главную</a></li>
+                            <li><a href="calculate.html" class="header__logo-item">Расчет интеграла</a></li>
+                            <li class="header__logo-sub"><a href="#" class="header__logo-subitem">Демонстрация</a>
+                                <ul class="submenu">
+                                    <li class="submenu__item"><a href="rectDemo.html" class="submenu__item-link">Метод ЦП</a></li>
+                                    <li class="submenu__item"><a href="trapDemo.html" class="submenu__item-link">Метод Трапеций</a></li>
+                                    <li class="submenu__item"><a href="#" class="submenu__item-link">Метод Симпсона</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="task__integration">
+            <div class="container">
+                <div class="task__integration__inner">
+                    <div class="main__title"><h2 class="title__task">Задача численного интегрирования</h2></div>
+                    <div class="suptitle"><span class="suptitle__integration">Численное интегрирование</span> — вычисление значения определённого интеграла (как правило, приближённое).</div>
+                    <p>Задача численного интегрирования состоит в замене исходной подынтегральной функции некоторой аппроксимирующей функцией (обычно полиномом).</p>
+                    <div class="task__list">Численное интегрирование применяется, когда:
+                     <ul>
+                         <li>сама подынтегральная функция не задана аналитически, а например, представлена в виде таблицы значений;</li>
+                         <li>аналитическое представление подынтегральной функции известно, но её первообразная не выражается через аналитические функции.</li>
+                     </ul>
+                    <div class="geometric__img">
+                        <img src="img/geometric.png" alt="">
+                        <span class="geometric__title">Рис. 1 Геометрический смысл интеграла</span>
+                    </div>
+                    </div>
+                    <p>Способы численного вычисления определенных интегралов основаны на замене интеграла конечной суммой:</p>
+                    <div><img src="img/integral_task.png" alt=""></div>
+                    <p>где <img src="img/c.png" alt="">  – числовые коэффициенты, выбор которых зависит от выбранного метода численного интегрирования,<img src="img/xj.png" alt=""> – узлы интегрирования <img src="img/listXj.png" alt=""></p>
+                    <p>Разделим отрезок [a,b] на N равных частей, то есть на N элементарных отрезков. Длина каждого элементарного отрезка:</p>
+                    <div><img src="img/step.png" alt=""></div>
+                    <p>Тогда значение интеграла можно представить в виде:</p>
+                    <div><img src="img/integ.png" alt=""></div>
+                    <p>Из этого выражения видно, что для численного интегрирования на отрезке [a,b], достаточно построить квадратурную формулу на каждом частичном отрезке <img src="img/xjx.png" alt=""></p>
+                </div>
+            </div>
+        </section>
+       
+        <footer class="navigation">
+            <div class="container">
+                <nav class="navigation__menu">
+                    <ul class="footer__menu">
+                        <li><a href="about.html" class="footer-item actim-method">Задача Ч.И.</a></li>
+                        <li><a href="rectangle.html" class="footer-item">Метод ЦП</a></li>
+                        <li><a href="trap.html" class="footer-item">Метод трапеций</a></li>
+                        <li><a href="parabol.html" class="footer-item">Метод Симпсона</a></li>
+                    </ul>
+                </nav>
+            </div>
+        <footer>
+          
+    </main>
+    <script src="js/buttonTop.js"></script>
+</body>
+</html>

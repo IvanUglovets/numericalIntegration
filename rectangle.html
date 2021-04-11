@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/rectangle.css">
+</head>
+<body>
+    <main class="page">
+       <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li><a href="index.html" class="header__logo-item">На главную</a></li>
+                            <li><a href="calculate.html" class="header__logo-item">Расчет интеграла</a></li>
+                            <li class="header__logo-sub"><a href="#" class="header__logo-subitem">Демонстрация</a>
+                                <ul class="submenu">
+                                    <li class="submenu__item"><a href="rectDemo.html" class="submenu__item-link">Метод ЦП</a></li>
+                                    <li class="submenu__item"><a href="trapDemo.html" class="submenu__item-link">Метод Трапеций</a></li>
+                                    <li class="submenu__item"><a href="#" class="submenu__item-link">Метод Симпсона</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="rectangle__integration">
+            <div class="container">
+                <div class="rectangle__integration__inner">
+                    <div class="title_rec"><h2 class="rectangle__title">Методы прямоугольников</h2></div>
+                    <div class="rectangle__about">
+                        Одним из простейших методов численного интегрирования является метод прямоугольников. На частичном отрезке <img src="img/xjx.png" alt="" >
+                        подынтегральную функцию заменяют полиномом Лагранжа нулевого порядка, построенным в одной точке. В качестве этой точки можно выбрать середину частичного отрезка
+                        <img src="img/0.5x.png" alt="">.
+                        <p>Тогда значение интеграла на частичном отрезке:</p>
+                        <img src="img/suprectangle.png" alt="">
+                        <p>Подставив это выражение в:</p>
+                        <img src="img/integ.png" alt="">
+                        <p>Получим составную формулу <span class="rectangle__center">метода средних прямоугольников:</span></p>
+                        <p class="formula"><img src="img/cp.png" alt=""> <span class="number__formul">(1)</span></p>
+                        <p>Графическая иллюстрация метода средних прямоугольников представлена на рис 2. Из рисунка видно, что площадь криволинейной трапеции приближенно заменяется площадью многоугольника, составленного из N прямоугольников. Таким образом, вычисление определенного интеграла сводится к нахождению суммы N элементарных прямоугольников.</p>
+                        <div class="img__cp"><img src="img/img_cp.png" alt=""></div>
+                        <p class="img__cp-item">Pис. 1 Метод средних прямоугольников</p>
+                        <p>Формулу (1) можно представить в ином виде:</p>
+                        <div class="left__rigth"><img src="img/left.png" alt=""> <span class="or__text">или</span> <img class="right" src="img/right.png" alt=""></div>
+                        <p>Эти формулы называются формулой левых и правых прямоугольников соответственно. Графически метод левых и правых прямоугольников представлен на рис. 2 и рис. 3. Однако из-за нарушения симметрии в формулах правых и левых прямоугольников, их погрешность значительно больше, чем в методе средних прямоугольников.</p>
+                        <div class="img__left-right"><img src="img/img_left.png" alt=""> <img src="img/img_right.png" alt="">
+                            <span class="left__img">Рис. 2 Метод левых прямоугольников</span>
+                            <span class="right__img">Рис. 3 Метод правых прямоугольников</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="navigation">
+            <div class="container">
+                <nav class="navigation__menu">
+                    <ul class="footer__menu">
+                        <li><a href="about.html" class="footer-item">Задача Ч.И.</a></li>
+                        <li><a href="rectangle.html" class="footer-item actim-method">Метод ЦП</a></li>
+                        <li><a href="trap.html" class="footer-item">Метод трапеций</a></li>
+                        <li><a href="parabol.html" class="footer-item">Метод Симпсона</a></li>
+                    </ul>
+                </nav>
+            </div>
+        <footer>
+    </main>
+</body>
+</html>
