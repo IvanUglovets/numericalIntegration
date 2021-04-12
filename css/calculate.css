@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -132,15 +133,32 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 .calculate .calculate__method-inner .calculate__tools {
-  font-style: italic;
   font-size: 18px;
 }
-.calculate .calculate__method-inner .calculate__tools p {
+.calculate .calculate__method-inner .calculate__tools .calculate__list {
+  font-style: italic;
+}
+.calculate .calculate__method-inner .calculate__tools .title__input {
   margin-bottom: 20px;
   font-family: "Open Sans", sans-serif;
-  font-style: italic;
   font-size: 20px;
   color: orange;
+  position: relative;
+  text-align: left;
+}
+.calculate .calculate__method-inner .calculate__tools .title__input::after {
+  font-style: normal;
+  content: "🡇";
+  font-size: 20px;
+  color: black;
+}
+.calculate .calculate__method-inner .calculate__tools .title__input:hover {
+  cursor: pointer;
+}
+.calculate .calculate__method-inner .calculate__tools .title__after::after {
+  margin-left: 5px;
+  content: "✖";
+  color: black;
 }
 .calculate .calculate__method {
   display: flex;
@@ -336,4 +354,17 @@ h1, h2, h3, h4, h5, h6 {
 .chart .myChart {
   max-width: 1000px;
   height: 200px;
+}
+
+.calculate__tools {
+  min-height: 480px;
+}
+
+.calculate__list {
+  opacity: 0;
+}
+
+.active__accordion {
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }

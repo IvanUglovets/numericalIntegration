@@ -145,15 +145,35 @@ h1,h2,h3,h4,h5,h6{
             align-items: center;
             justify-content: space-between;
             .calculate__tools{
-                font-style: italic;
+                .calculate__list{
+                    font-style: italic;
+                }
+                //font-style: italic;
                 font-size: 18px;
-                p{
+                .title__input{
                     margin-bottom: 20px;
                     font-family: $font1;
-                    font-style: italic;
+                    //font-style: italic;
                     font-size: 20px;
                     color: orange;
+                    position: relative;
+                    text-align:left;
                 }
+                .title__input::after{
+                    font-style: normal;
+                    content: '\1F847';
+                    font-size:20px;
+                    color: black;
+                }
+                .title__input:hover{
+                    cursor: pointer;
+                }
+                .title__after::after{
+                    margin-left: 5px;
+                    content: "\2716";
+                    color: black;
+                }
+
             }
         }
         .calculate__method{
@@ -362,3 +382,19 @@ h1,h2,h3,h4,h5,h6{
             height: 200px;
         }
 }
+.calculate__tools{
+    min-height: 480px;
+}
+.calculate__list{
+    opacity: 0;
+}
+
+.active__accordion{
+    transition: opacity .8s ease;
+    opacity: 1;
+}
+
+
+
+
+
