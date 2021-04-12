@@ -108,6 +108,7 @@ h1,h2,h3,h4,h5,h6{
             background-color: rgb(224, 219, 224);
             z-index:1000;
             opacity: 0;
+            pointer-events:none;
            // display: none;
             .submenu__item{
                 border: 1px solid black;
@@ -134,7 +135,7 @@ h1,h2,h3,h4,h5,h6{
         }
 
         .header__logo-sub:hover .submenu{
-            //display: block;
+            pointer-events: auto;
             opacity: 1;
             transition: all 1s ease;
         }

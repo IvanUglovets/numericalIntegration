@@ -80,7 +80,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   text-decoration: none;
   color: #F7F7F7;
-  margin-right: 61px;
   font-family: "Open Sans", sans-serif;
   font-size: 23px;
   color: #F7F7F7;
@@ -90,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #e0dbe0;
   z-index: 1000;
   opacity: 0;
+  pointer-events: none;
 }
 .header__inner .submenu .submenu__item {
   border: 1px solid black;
@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 .header__inner .header__logo-sub:hover .submenu {
+  pointer-events: auto;
   opacity: 1;
   transition: all 1s ease;
 }

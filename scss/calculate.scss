@@ -93,6 +93,7 @@ h1,h2,h3,h4,h5,h6{
                     @include submenu;
                 }
                 .submenu{
+                    pointer-events:none;
                     list-style: none;
                     margin: 0;
                     padding: 0;
@@ -127,6 +128,7 @@ h1,h2,h3,h4,h5,h6{
         
                 .header__logo-sub:hover .submenu{
                     //display: block;
+                    pointer-events:auto;
                     opacity: 1;
                     transition: all 1s ease;
                 }
