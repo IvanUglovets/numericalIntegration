@@ -1,400 +1,394 @@
 //variable
-$font1:'Open Sans', sans-serif;
-$font2:'Roboto', sans-serif;
-$font3:'Playfair Display', serif;
-$primary: #F7F7F7;
+$font1: "Open Sans", sans-serif;
+$font2: "Roboto", sans-serif;
+$font3: "Playfair Display", serif;
+$primary: #f7f7f7;
 //varaible-end
 @mixin submenu {
-    display: block;
-    text-decoration: none;
-    color: $primary;
-    font-family: $font1;
-    font-size: 20px;
-    color:$primary;
-    padding-top: 7px;
+  display: block;
+  text-decoration: none;
+  color: $primary;
+  font-family: $font1;
+  font-size: 20px;
+  color: $primary;
+  padding-top: 7px;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font1;
-    
-}
-
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font1;
 }
 
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
-.header{
-    background-color: #4067b7;
-    position: fixed;
-    z-index: 10000;
-    width: 100%;
-    padding-bottom: 10px;
-    .header__inner{
-        display:flex;
-        justify-content:flex-start;
-        align-items:center;
-        .menu{
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            .menu__list{
-                display: flex;
-                justify-content:center;
-                align-items:center;
-                list-style: none;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                .header__logo-item{
-                    position: relative;
-                    display: block;
-                    text-decoration: none;
-                    color:$primary;
-                    margin-right: 20px;
-                    font-size: 20px;
-                    padding-top: 10px;
-                    
-                }
-                .header__logo-item::after{
-                    content: '';
-                    position: absolute;
-                    display: block;
-                    top: 100%;
-                    left: 0;
-                    z-index: 1;
-                    width: 100%;
-                    height: 1px;
-                    background: $primary;
-                    opacity: 0;
-                    //opacity: 1;
-                    transition: opacity .3s linear;
-                }
-                .header__logo-item:hover::after{
-                    opacity: 1;
-                }
-                .header__logo-sub{
-                    position: relative;
-                }
-                .header__logo-subitem{
-                    @include submenu;
-                }
-                .submenu{
-                    pointer-events:none;
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                    position:absolute;
-                    background-color: rgb(224, 219, 224);
-                    z-index:1000;
-                    opacity: 0;
-                   // display: none;
-                    .submenu__item{
-                        border: 1px solid black;
-                        text-align: center;
-                        min-width: 164px;
-                        .submenu__item-link{
-                            display: inline-block;
-                            text-decoration: none;
-                            color: black;
-                            padding: 5px 10px;
-                            font-family: $font1;
-                            font-size: 16px;
-                            
-                        }
-                        .submenu__item-link:hover{
-                            color: $primary;
-                        }
-                        
-                    }
-                    .submenu__item:hover{
-                        background-color: rgb(46, 44, 44);
-                        transition: all 0.3s ease;
-                    }
-                }
-        
-                .header__logo-sub:hover .submenu{
-                    //display: block;
-                    pointer-events:auto;
-                    opacity: 1;
-                    transition: all 1s ease;
-                }
-            }
-        }
-    }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-.calculate{
-    padding-top: 60px;
-    padding-bottom: 100px;
-    background-color: rgb(233, 233, 241);        
-        .calculate__method-inner{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            .calculate__tools{
-                .calculate__list{
-                    font-style: italic;
-                }
-                //font-style: italic;
-                font-size: 18px;
-                .title__input{
-                    margin-bottom: 20px;
-                    font-family: $font1;
-                    //font-style: italic;
-                    font-size: 20px;
-                    color: orange;
-                    position: relative;
-                    text-align:left;
-                }
-                .title__input::after{
-                    font-style: normal;
-                    content: '\1F847';
-                    font-size:20px;
-                    color: black;
-                }
-                .title__input:hover{
-                    cursor: pointer;
-                }
-                .title__after::after{
-                    margin-left: 5px;
-                    content: "\2716";
-                    color: black;
-                }
-
-            }
-        }
-        .calculate__method{
-            display: flex;
-            justify-content: center;
-            align-items:flex-start;
-            flex-direction:column;
-        }
-        .calculate__title{
-            font-family: $font2;
-            font-size: 40px;
-            font-weight: normal;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            text-align: center;
-            margin-bottom: 50px; 
-        }
-        .logo{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-family: $font1;
-            font-size: 50px;
-            color:black;
-            margin-top: 20px;
-
-            .intro__integral{
-                display:inline-block;
-                position: relative;
-                margin-right: 5px;
-            }
-            .intro__integral::before{
-                content: 'a';
-                position: absolute;
-                top: 55px;
-                font-size: 12px;
-                right: 10px;
-                color:black;
-            }
-            .intro__integral::after{
-                content: 'b';
-                position: absolute;
-                bottom: 60px;
-                font-size: 12px;
-                left: 10px;
-                color:black;
-
-            }
-            .intro__function{
-                display:inline-block;
-                font-size: 25px;
-                text-align: center;
-                font-style: italic;
-            }
-        }
-        .input-block{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            label{
-                display: block;
-                font-family: $font1;
-                font-size: 20px;
-                font-weight: 400;
-                margin-right: 10px;
-            }
-            .input{
-                padding: 8px 20px;
-                text-align: center;
-                font-family: $font2;
-                font-size: 18px;
-                background-color: $primary;
-                border: none;
-                border-radius: 2px;
-            } 
-        }
-        .block-button{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .btn{
-                position: relative;
-                display: block;
-                color: rgb(65, 38, 38);
-                font-size: 14px;
-                font-family: $font1;
-                text-decoration: none;
-                border: 2px solid #ff7675;
-                padding: 4px 40px;
-                text-transform: uppercase;
-                overflow: hidden;
-                transition: 1s all ease;
-                margin-right: 20px;
-              }
-              .btn::before{
-                background: #ff7675;
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%,-50%);
-                z-index: -1;
-                transition: all 0.6s ease;
-              }
-              .btn:hover{
-                  cursor: pointer;
-                  background: rgb(129, 114, 143);
-                  color: white;
-                  font-size: 14px;
-              }
-        }
-        .result_integral{
-            position: relative;
-            
-            .result__title{
-                font-size: 24px;
-                color: black;
-                font-family: $font1;
-                text-align: center;
-            }
-            .result__wrapper{
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 20px;
-                //top: 75%;
-                //left: 0;
-            }
-            .wrapper__btn{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 190px;
-                .content_rectangle{
-                    padding-top: 30px;
-                    display: block;
-                    font-size: 18px;
-                    font-family: $font2;
-                    margin-right: 30px;
-                    max-height:200px
-                }   
-            }
-             
-    }
-    .wrapper__chart-back{
+.header {
+  background-color: #4067b7;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-bottom: 10px;
+  .header__inner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .menu__list {
         display: flex;
-        justify-content: start;
-        flex-direction: column;
-        .btn__chart{
-            display:block;
-            width: 15%;
-            //padding: 10px 40px;
-            font-family: $font1;
-            font-size: 14px;
-            color: black;
-            text-align: center;
-            transition: all 0.6s ease;
-            margin-top: 20px;
-            margin-right: 20px;
-            border-style: none;
-            border: 1px solid black;
-            text-decoration: none;
-        }
-        .btn__chart:hover{
-            cursor: pointer;
-            background-color: rgb(129, 114, 143);
-            color: $primary;
-
-        }
-        .link-back{
-           display:block;
-           width: 15%;
-           text-decoration: none;
-           border: 1px solid black;
-           //padding: 5px 30px;
-           font-family: $font1;
-           color: black;
-           text-align: center;
-           transition: all 0.6s ease;
-           margin-top: 20px;
-         }
-        .link-back:hover{
-            cursor: pointer;
-            background-color: rgb(129, 114, 143);
-            color: $primary;
-        }
-    }
-}
-
-
-.chart{
-    width: 100%;
-    background-color: rgb(233, 233, 241);
-    .chart__inner{
-        display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
-        flex-direction: column;
-    }
-        .myChart{
-            max-width: 1000px;
-            height: 200px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .header__logo-item {
+          position: relative;
+          display: block;
+          text-decoration: none;
+          color: $primary;
+          margin-right: 20px;
+          font-size: 20px;
+          padding-top: 10px;
         }
+        .header__logo-item::after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 100%;
+          left: 0;
+          z-index: 1;
+          width: 100%;
+          height: 1px;
+          background: $primary;
+          opacity: 0;
+          //opacity: 1;
+          transition: opacity 0.3s linear;
+        }
+        .header__logo-item:hover::after {
+          opacity: 1;
+        }
+        .header__logo-sub {
+          position: relative;
+        }
+        .header__logo-subitem {
+          @include submenu;
+        }
+        .submenu {
+          pointer-events: none;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          background-color: rgb(224, 219, 224);
+          z-index: 1000;
+          opacity: 0;
+          // display: none;
+          .submenu__item {
+            border: 1px solid black;
+            text-align: center;
+            min-width: 164px;
+            .submenu__item-link {
+              display: inline-block;
+              text-decoration: none;
+              color: black;
+              padding: 5px 10px;
+              font-family: $font1;
+              font-size: 16px;
+            }
+            .submenu__item-link:hover {
+              color: $primary;
+            }
+          }
+          .submenu__item:hover {
+            background-color: rgb(46, 44, 44);
+            transition: all 0.3s ease;
+          }
+        }
+
+        .header__logo-sub:hover .submenu {
+          //display: block;
+          pointer-events: auto;
+          opacity: 1;
+          transition: all 1s ease;
+        }
+      }
+    }
+  }
 }
-.calculate__tools{
-    min-height: 480px;
+.calculate {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  background-color: rgb(233, 233, 241);
+  .calculate__method-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .calculate__tools {
+      .calculate__list {
+        font-style: italic;
+      }
+      font-size: 18px;
+      .title__input {
+        margin-bottom: 20px;
+        font-family: $font1;
+        font-size: 20px;
+        color: orange;
+        position: relative;
+        text-align: left;
+        border-radius: 5px;
+      }
+      .title__input::after {
+        font-style: normal;
+        content: "\1F847";
+        font-size: 20px;
+        color: black;
+      }
+      .title__input:hover {
+        cursor: pointer;
+        background-color: #797272;
+        color: $primary;
+        border: 1px solid black;
+        transition: all 0.6s ease;
+      }
+      .title__after::after {
+        margin-left: 5px;
+        content: "\2716";
+        color: black;
+      }
+    }
+  }
+  .calculate__method {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .calculate__title {
+    font-family: $font2;
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font1;
+    font-size: 50px;
+    color: black;
+    margin-top: 20px;
+
+    .intro__integral {
+      display: inline-block;
+      position: relative;
+      margin-right: 5px;
+    }
+    .intro__integral::before {
+      content: "a";
+      position: absolute;
+      top: 55px;
+      font-size: 12px;
+      right: 10px;
+      color: black;
+    }
+    .intro__integral::after {
+      content: "b";
+      position: absolute;
+      bottom: 60px;
+      font-size: 12px;
+      left: 10px;
+      color: black;
+    }
+    .intro__function {
+      display: inline-block;
+      font-size: 25px;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+  .input-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    label {
+      display: block;
+      font-family: $font1;
+      font-size: 20px;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+    .input {
+      padding: 8px 20px;
+      text-align: center;
+      font-family: $font2;
+      font-size: 18px;
+      background-color: $primary;
+      border: none;
+      border-radius: 2px;
+    }
+  }
+  .block-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      position: relative;
+      display: block;
+      color: rgb(65, 38, 38);
+      font-size: 14px;
+      font-family: $font1;
+      text-decoration: none;
+      border: 2px solid #ff7675;
+      padding: 4px 40px;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 1s all ease;
+      margin-right: 20px;
+    }
+    .btn::before {
+      background: #ff7675;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      transition: all 0.6s ease;
+    }
+    .btn:hover {
+      cursor: pointer;
+      background: rgb(129, 114, 143);
+      color: white;
+      font-size: 14px;
+    }
+  }
+  .result_integral {
+    position: relative;
+
+    .result__title {
+      font-size: 24px;
+      color: black;
+      font-family: $font1;
+      text-align: center;
+    }
+    .result__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      //top: 75%;
+      //left: 0;
+    }
+    .wrapper__btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 190px;
+      .content_rectangle {
+        padding-top: 30px;
+        display: block;
+        font-size: 18px;
+        font-family: $font2;
+        margin-right: 30px;
+        max-height: 200px;
+      }
+    }
+  }
+  .wrapper__chart-back {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    .btn__chart {
+      display: block;
+      width: 15%;
+      //padding: 10px 40px;
+      font-family: $font1;
+      font-size: 14px;
+      color: black;
+      text-align: center;
+      transition: all 0.6s ease;
+      margin-top: 20px;
+      margin-right: 20px;
+      border-style: none;
+      border: 1px solid black;
+      text-decoration: none;
+    }
+    .btn__chart:hover {
+      cursor: pointer;
+      background-color: rgb(129, 114, 143);
+      color: $primary;
+    }
+    .link-back {
+      display: block;
+      width: 15%;
+      text-decoration: none;
+      border: 1px solid black;
+      //padding: 5px 30px;
+      font-family: $font1;
+      color: black;
+      text-align: center;
+      transition: all 0.6s ease;
+      margin-top: 20px;
+    }
+    .link-back:hover {
+      cursor: pointer;
+      background-color: rgb(129, 114, 143);
+      color: $primary;
+    }
+  }
 }
-.calculate__list{
-    opacity: 0;
+
+.chart {
+  width: 100%;
+  background-color: rgb(233, 233, 241);
+  .chart__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .myChart {
+    max-width: 1000px;
+    height: 200px;
+  }
+}
+.calculate__tools {
+  min-height: 480px;
+}
+.calculate__list {
+  opacity: 0;
 }
 
-.active__accordion{
-    transition: opacity .8s ease;
-    opacity: 1;
+.active__accordion {
+  transition: opacity 0.8s ease;
+  opacity: 1;
 }
-
-
-
-
-

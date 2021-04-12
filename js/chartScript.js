@@ -36,7 +36,7 @@ const buildChart = () =>{
         data: {
             labels: calculatePointsX(),
             datasets: [{
-                label: `График функции: ${document.getElementById('func').value}`,
+                label: `График функции: ${document.getElementById('func').value} при N = 20`,
                 data: calculationPointsY(calculatePointsX()),
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',

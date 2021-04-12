@@ -24,7 +24,7 @@ calculateTools.addEventListener("click", () => {
 // delete MAth
 function takeAwayMath() {
   let math_methods = Object.getOwnPropertyNames(Math);
-  for (var i in math_methods) {
+  for (let i in math_methods) {
     this[math_methods[i]] = Math[math_methods[i]];
   }
 }

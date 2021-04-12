@@ -118,7 +118,6 @@ function printGraph(zoom, a, b, n){
     stroke(0, 0, 0, 127);
     for(let i = 0; i <= n; i++){
         let x0 = a + i * dx;
-        
         line(x0 * zoom, 0, 
             x0 * zoom,  -func(x0) * zoom);
         text(`x${i}`,x0 * zoom,10);

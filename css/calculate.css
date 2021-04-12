@@ -12,7 +12,12 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -53,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: block;
   text-decoration: none;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-right: 20px;
   font-size: 20px;
   padding-top: 10px;
@@ -67,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   width: 100%;
   height: 1px;
-  background: #F7F7F7;
+  background: #f7f7f7;
   opacity: 0;
   transition: opacity 0.3s linear;
 }
@@ -80,10 +85,10 @@ h1, h2, h3, h4, h5, h6 {
 .header .header__inner .menu .menu__list .header__logo-subitem {
   display: block;
   text-decoration: none;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   padding-top: 7px;
 }
 .header .header__inner .menu .menu__list .submenu {
@@ -110,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 .header .header__inner .menu .menu__list .submenu .submenu__item .submenu__item-link:hover {
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .header .header__inner .menu .menu__list .submenu .submenu__item:hover {
   background-color: #2e2c2c;
@@ -129,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .calculate .calculate__method-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 .calculate .calculate__method-inner .calculate__tools {
@@ -145,6 +150,7 @@ h1, h2, h3, h4, h5, h6 {
   color: orange;
   position: relative;
   text-align: left;
+  border-radius: 5px;
 }
 .calculate .calculate__method-inner .calculate__tools .title__input::after {
   font-style: normal;
@@ -154,6 +160,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .calculate .calculate__method-inner .calculate__tools .title__input:hover {
   cursor: pointer;
+  background-color: #797272;
+  color: #f7f7f7;
+  border: 1px solid black;
+  transition: all 0.6s ease;
 }
 .calculate .calculate__method-inner .calculate__tools .title__after::after {
   margin-left: 5px;
@@ -229,7 +239,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border: none;
   border-radius: 2px;
 }
@@ -322,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 .calculate .wrapper__chart-back .btn__chart:hover {
   cursor: pointer;
   background-color: #81728f;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .calculate .wrapper__chart-back .link-back {
   display: block;
@@ -338,7 +348,7 @@ h1, h2, h3, h4, h5, h6 {
 .calculate .wrapper__chart-back .link-back:hover {
   cursor: pointer;
   background-color: #81728f;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 
 .chart {
