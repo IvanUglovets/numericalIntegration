@@ -20,6 +20,10 @@ $primary: #f7f7f7;
   font-family: $font1;
 }
 
+body {
+  position: relative;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -391,4 +395,33 @@ h6 {
 .active__accordion {
   transition: opacity 0.8s ease;
   opacity: 1;
+}
+
+.link__up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 54px;
+  height: 54px;
+  position: fixed;
+  font-size: 40px;
+  font-weight: bold;
+  bottom: 10%;
+  right: 5%;
+  opacity: 0;
+  border: 2px solid rgb(10, 10, 95);
+  border-radius: 50%;
+  .link__item {
+    text-decoration: none;
+    .fa-arrow-up:hover {
+      color: red;
+    }
+  }
+}
+.link__up:hover {
+  border: 2px solid red;
+}
+.link__up-active {
+  opacity: 1;
+  transition: all 0.6s ease;
 }

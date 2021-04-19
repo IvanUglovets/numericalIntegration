@@ -9,11 +9,19 @@ const btnTrap = document.getElementById("btn_trap");
 const btnParabol = document.getElementById("btn_parabol");
 const calculateTools = document.querySelector(".title__input");
 const calculateList = document.querySelector(".calculate__list");
+const linkUp = document.querySelector(".link__up");
+
+window.addEventListener("scroll", () => {
+  if (this.scrollY > 100) {
+    linkUp.classList.add("link__up-active");
+  } else {
+    linkUp.classList.remove("link__up-active");
+  }
+});
 
 calculateTools.addEventListener("click", () => {
   if (calculateList.classList.contains("active__accordion")) {
     calculateList.classList.remove("active__accordion");
-
     calculateTools.classList.remove("title__after");
   } else {
     calculateList.classList.add("active__accordion");
