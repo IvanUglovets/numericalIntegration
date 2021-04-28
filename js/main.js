@@ -10,6 +10,7 @@ const btnParabol = document.getElementById("btn_parabol");
 const calculateTools = document.querySelector(".title__input");
 const calculateList = document.querySelector(".calculate__list");
 const linkUp = document.querySelector(".link__up");
+const delta = document.querySelector(".delta");
 
 window.addEventListener("scroll", () => {
   if (this.scrollY > 100) {
@@ -19,15 +20,15 @@ window.addEventListener("scroll", () => {
   }
 });
 
-calculateTools.addEventListener("click", () => {
-  if (calculateList.classList.contains("active__accordion")) {
-    calculateList.classList.remove("active__accordion");
-    calculateTools.classList.remove("title__after");
-  } else {
-    calculateList.classList.add("active__accordion");
-    calculateTools.classList.add("title__after");
-  }
-});
+// calculateTools.addEventListener("click", () => {
+//   if (calculateList.classList.contains("active__accordion")) {
+//     calculateList.classList.remove("active__accordion");
+//     calculateTools.classList.remove("title__after");
+//   } else {
+//     calculateList.classList.add("active__accordion");
+//     calculateTools.classList.add("title__after");
+//   }
+// });
 
 // delete MAth
 function takeAwayMath() {
@@ -42,7 +43,8 @@ const centralRectangle = () => {
   let x = [];
   const a = Number(left.value.trim());
   const b = Number(right.value.trim());
-  const N = Number(step.value.trim());
+  let N = Number(step.value.trim());
+  const eps = Number(delta.value.trim());
   takeAwayMath();
   function F(x) {
     let func = document.getElementById("func").value;
@@ -58,25 +60,38 @@ const centralRectangle = () => {
     }
     return h * sum;
   }
-  const result = calculate(F, a, b, N);
-  isNaN(result)
-    ? (integralRectangle.innerHTML = "Ошибка!!!Проверьте ввод данных.")
-    : (integralRectangle.innerHTML =
-        "Метод ЦП: " + String(result.toPrecision(10)));
+
+  function absDelta() {
+    let resultBack, resultNext;
+    resultBack = calculate(F, a, b, N);
+    do {
+      resultNext = resultBack;
+      N = N * 2;
+      resultBack = calculate(F, a, b, N);
+    } while (Math.abs(resultBack - resultNext) > eps);
+    return [resultBack, Math.abs(resultBack - resultNext)];
+  }
+
+  const result = absDelta();
+  console.log(result[0]);
+  integralRectangle.innerHTML = `Метод ЦП:  ${result[0].toFixed(
+    8
+  )} Погрешность: ${result[1].toFixed(8)}`;
 };
 //Метод трапеций
 const methodTrap = () => {
   let x = [];
   const a = Number(left.value.trim());
   const b = Number(right.value.trim());
-  const N = Number(step.value.trim());
+  let N = Number(step.value.trim());
+  const eps = Number(delta.value.trim());
   takeAwayMath();
   function F(x) {
     let func = document.getElementById("func").value;
     let expr = eval(func);
     return expr;
   }
-  let pieceFunc = (F(a) + F(b)) / 2;
+
   function calculate(F, a, b, N) {
     let sum = 0;
     let h = (b - a) / N;
@@ -86,11 +101,23 @@ const methodTrap = () => {
     }
     return sum;
   }
-  const result = calculate(F, a, b, N);
-  isNaN(result)
-    ? (integralTrap.innerHTML = "Ошибка!!!Проверьте ввод данных.")
-    : (integralTrap.innerHTML =
-        "Метод трапеций: " + String(result.toPrecision(10)));
+
+  function absDelta() {
+    let resultBack, resultNext;
+    resultBack = calculate(F, a, b, N);
+    do {
+      resultNext = resultBack;
+      N = N * 2;
+      resultBack = calculate(F, a, b, N);
+    } while (Math.abs(resultBack - resultNext) > eps);
+    return [resultBack, Math.abs(resultBack - resultNext)];
+  }
+
+  const result = absDelta();
+
+  integralTrap.innerHTML = `Метод Трапеций:  ${result[0].toFixed(
+    8
+  )} Погрешность: ${result[1].toFixed(8)}`;
 };
 
 //Метод Симпсона
@@ -98,7 +125,8 @@ const methodParabol = () => {
   let x = [];
   const a = Number(left.value.trim());
   const b = Number(right.value.trim());
-  const N = Number(step.value.trim());
+  let N = Number(step.value.trim());
+  const eps = Number(delta.value.trim());
   takeAwayMath();
   function F(x) {
     let func = document.getElementById("func").value;
@@ -114,11 +142,21 @@ const methodParabol = () => {
     }
     return (h / 3) * (F(a) + sum + F(b));
   }
-  let result = calculate(F, a, b, N);
-  isNaN(result)
-    ? (integralParabol.innerHTML = "Ошибка!!!Проверьте ввод данных.")
-    : (integralParabol.innerHTML =
-        "Метод Симпсона: " + String(result.toPrecision(10)));
+  function absDelta() {
+    let resultBack, resultNext;
+    resultBack = calculate(F, a, b, N);
+    do {
+      resultNext = resultBack;
+      N = N * 2;
+      resultBack = calculate(F, a, b, N);
+    } while (Math.abs(resultBack - resultNext) > eps);
+    return [resultBack, Math.abs(resultBack - resultNext)];
+  }
+  const result = absDelta();
+
+  integralParabol.innerHTML = `Метод Симпсона:  ${result[0].toFixed(
+    8
+  )} Погрешность: ${result[1].toFixed(8)}`;
 };
 
 btnTrap.addEventListener("click", methodTrap);

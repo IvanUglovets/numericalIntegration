@@ -16,7 +16,7 @@ function setup() {
     slider.zoom = createSlider(1, 150, 150);
     slider.a = createSlider(-100, 100, -15);
     slider.b = createSlider(-100, 100, 20);
-    slider.n = createSlider(1, 30, 4);
+    slider.n = createSlider(2, 30, 8, 2);
 
     slider.zoom.position(20, 20);
     slider.a.position(20, 50);
@@ -41,10 +41,10 @@ function draw() {
     printGraph(zoom, a, b, n);
   }
 
-  fill("#fff");
-  rect(WIDTH - 65, HEIGHT - 15, 65, -20);
-  fill("blue");
-  text(Math.round(frameRate()) + " FPS", WIDTH - 60, HEIGHT - 20);
+  // fill("#fff");
+  // rect(WIDTH - 65, HEIGHT - 15, 65, -20);
+  // fill("blue");
+  // text(Math.round(frameRate()) + " FPS", WIDTH - 60, HEIGHT - 20);
 }
 
 function printGraph(zoom, a, b, n) {
@@ -121,7 +121,7 @@ function printGraph(zoom, a, b, n) {
   for (let i = 0; i <= n; i++) {
     let x0 = a + i * dx;
 
-    //line(x0 * zoom, 0, x0 * zoom, -func(x0) * zoom);
+    line(x0 * zoom, 0, x0 * zoom, -func(x0) * zoom);
     beginShape();
     fill(255, 0, 0);
     circle(x0 * zoom, -func(x0) * zoom, 3.5);
@@ -131,9 +131,11 @@ function printGraph(zoom, a, b, n) {
 
   let area = 0;
   let sum = 0;
-  for (let i = 1, sign = 1; i < n; i++, sign *= -1) {
+  for (let i = 0, sign = 1; i < n; i++, sign *= -1) {
     let x0 = a + i * dx;
     let x1 = a + (i + 1) * dx;
+    // let x2 = a + (i - 2) * dx;
+    //console.log(x2);
 
     sum += (3 + sign) * func(x0);
 
@@ -142,6 +144,8 @@ function printGraph(zoom, a, b, n) {
     beginShape();
     vertex(x0 * zoom, 0);
     vertex(x1 * zoom, 0);
+    // vertex(x2 * zoom, 0);
+    //vertex(x2 * zoom, -func(x2) * zoom);
     vertex(x1 * zoom, -func(x1) * zoom);
     vertex(x0 * zoom, -func(x0) * zoom);
     endShape();

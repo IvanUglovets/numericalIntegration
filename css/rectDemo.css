@@ -1,11 +1,17 @@
-html, body {
+html,
+body {
   position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding: 0;
   margin: 0;
 }
@@ -38,6 +44,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 .wrapper .trap__demo:hover {
   background-color: #302e2e;
-  color: #F7F7F7;
+  color: #f7f7f7;
   transition: all 0.3s ease;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3%;
+  left: 26%;
 }

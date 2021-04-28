@@ -163,24 +163,6 @@ h6 {
         text-align: left;
         border-radius: 5px;
       }
-      .title__input::after {
-        font-style: normal;
-        content: "\1F847";
-        font-size: 20px;
-        color: black;
-      }
-      .title__input:hover {
-        cursor: pointer;
-        background-color: #797272;
-        color: $primary;
-        border: 1px solid black;
-        transition: all 0.6s ease;
-      }
-      .title__after::after {
-        margin-left: 5px;
-        content: "\2716";
-        color: black;
-      }
     }
   }
   .calculate__method {
@@ -188,6 +170,22 @@ h6 {
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    .wrapper__btn {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 185px;
+      .content {
+        display: block;
+        font-size: 18px;
+        font-family: $font2;
+        margin-right: 30px;
+        max-height: 200px;
+        max-width: 180px;
+      }
+    }
   }
   .calculate__title {
     font-family: $font2;
@@ -310,31 +308,11 @@ h6 {
       //top: 75%;
       //left: 0;
     }
-    .wrapper__btn {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 190px;
-      .content_rectangle {
-        padding-top: 30px;
-        display: block;
-        font-size: 18px;
-        font-family: $font2;
-        margin-right: 30px;
-        max-height: 200px;
-      }
-    }
   }
   .wrapper__chart-back {
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
     .btn__chart {
       display: block;
-      width: 15%;
-      //padding: 10px 40px;
+      width: 70%;
       font-family: $font1;
       font-size: 14px;
       color: black;
@@ -384,17 +362,6 @@ h6 {
     max-width: 1000px;
     height: 200px;
   }
-}
-.calculate__tools {
-  min-height: 480px;
-}
-.calculate__list {
-  opacity: 0;
-}
-
-.active__accordion {
-  transition: opacity 0.8s ease;
-  opacity: 1;
 }
 
 .link__up {

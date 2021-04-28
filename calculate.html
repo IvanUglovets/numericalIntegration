@@ -96,25 +96,42 @@
                 <label for="">Количество разбиений N</label>
                 <input type="number" id="step" class="input step" value="100" />
               </div>
+              <div class="input-block step-block">
+                <label for="">Требуемая точность</label>
+                <input
+                  type="number"
+                  id="step"
+                  class="input delta"
+                  value="0.001"
+                />
+              </div>
               <div class="block-button">
                 <div class="wrapper__btn">
                   <button id="btn_rectangle" class="btn btn_rectangle">
                     Метод ЦП
                   </button>
-                  <p id="content_rectangle" class="content_rectangle"></p>
+                  <p
+                    id="content_rectangle"
+                    class="content content_rectangle"
+                  ></p>
                 </div>
                 <div class="wrapper__btn">
                   <button id="btn_trap" class="btn btn_trap">
                     Метод трапеций
                   </button>
-                  <p id="content_trap" class="content_trap"></p>
+                  <p id="content_trap" class="content content_trap"></p>
                 </div>
                 <div class="wrapper__btn">
                   <button id="btn_parabol" class="btn btn_parabol">
                     Метод Симпсона
                   </button>
-                  <p id="content_parabol" class="content_parabol"></p>
+                  <p id="content_parabol" class="content content_parabol"></p>
                 </div>
+              </div>
+              <div class="wrapper__chart-back">
+                <a href="#chart" id="btn_chart" class="btn btn__chart"
+                  >Построить график функции</a
+                >
               </div>
             </div>
             <div class="calculate__tools">
@@ -168,11 +185,6 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="wrapper__chart-back">
-          <a href="#chart" id="btn_chart" class="btn btn__chart"
-            >Построить график функции</a
-          >
         </div>
       </div>
     </section>

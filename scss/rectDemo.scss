@@ -1,51 +1,63 @@
-$font1:'Open Sans', sans-serif;
-$font2:'Roboto', sans-serif;
-$font3:'Playfair Display', serif;
+$font1: "Open Sans", sans-serif;
+$font2: "Roboto", sans-serif;
+$font3: "Playfair Display", serif;
 $font4: sans-serif;
-$primary: #F7F7F7;
+$primary: #f7f7f7;
 
-
-
-html,body {
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+html,
+body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-    padding: 0;
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
 }
-.title{
-    position: absolute;
-    top: 0;
-    left: 45%;
-    font-family: $font1;
-    font-size: 24px;
+.title {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  font-family: $font1;
+  font-size: 24px;
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    top: 20%;
-    left: 1%;
-    .trap__demo{
-        text-decoration: none;
-        display: block;
-        font-family: $font2;
-        font-size: 16px;
-        border: 1px solid black;
-        padding: 5px 10px;
-        color: black;
-        border-radius: 5px;
-    }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  top: 20%;
+  left: 1%;
+  .trap__demo {
+    text-decoration: none;
+    display: block;
+    font-family: $font2;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 5px;
+  }
 
-    .trap__demo:hover{
-        background-color:rgb(48, 46, 46);
-        color: $primary;
-        transition: all .3s ease;
-    }
+  .trap__demo:hover {
+    background-color: rgb(48, 46, 46);
+    color: $primary;
+    transition: all 0.3s ease;
+  }
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 3%;
+  left: 26%;
 }
