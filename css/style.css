@@ -11,7 +11,12 @@ ul {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -51,11 +56,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: block;
   text-decoration: none;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-right: 61px;
   font-family: "Open Sans", sans-serif;
   font-size: 23px;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .header__inner .header__logo-item::after {
   content: "";
@@ -76,13 +81,16 @@ h1, h2, h3, h4, h5, h6 {
 .header__inner .header__logo-sub {
   position: relative;
 }
+.header__inner .header__logo-sub:first-child {
+  margin-right: 61px;
+}
 .header__inner .header__logo-subitem {
   display: block;
   text-decoration: none;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-family: "Open Sans", sans-serif;
   font-size: 23px;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .header__inner .submenu {
   position: absolute;
@@ -94,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__inner .submenu .submenu__item {
   border: 1px solid black;
   text-align: center;
-  min-width: 164px;
+  min-width: auto;
 }
 .header__inner .submenu .submenu__item .submenu__item-link {
   display: inline-block;
@@ -105,11 +113,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
 }
 .header__inner .submenu .submenu__item .submenu__item-link:hover {
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .header__inner .submenu .submenu__item:hover {
   background-color: #2e2c2c;
   transition: all 0.3s ease;
+}
+.header__inner .submenu__theory {
+  position: absolute;
+  left: -20px;
 }
 .header__inner .header__logo-sub:hover .submenu {
   pointer-events: auto;
@@ -141,13 +153,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   line-height: 72px;
   letter-spacing: 2px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-bottom: 20px;
 }
 .intro__inner .intro__suptitle {
   text-align: center;
   font-size: 24px;
-  color: #F7F7F7;
+  color: #f7f7f7;
 }
 .intro__inner .logo {
   display: flex;
@@ -155,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-family: "Open Sans", sans-serif;
   font-size: 50px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   margin-top: 20px;
 }
 .intro__inner .logo .intro__integral {
@@ -186,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 .intro .title__name {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  color: #F7F7F7;
+  color: #f7f7f7;
   font-style: italic;
   position: absolute;
   bottom: 5px;

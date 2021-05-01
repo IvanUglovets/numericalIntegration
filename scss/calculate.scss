@@ -95,7 +95,9 @@ h6 {
         }
         .header__logo-sub {
           position: relative;
+          margin-right: 20px;
         }
+
         .header__logo-subitem {
           @include submenu;
         }
@@ -112,7 +114,7 @@ h6 {
           .submenu__item {
             border: 1px solid black;
             text-align: center;
-            min-width: 164px;
+            min-width: auto;
             .submenu__item-link {
               display: inline-block;
               text-decoration: none;
@@ -129,6 +131,10 @@ h6 {
             background-color: rgb(46, 44, 44);
             transition: all 0.3s ease;
           }
+        }
+        .submenu__theory {
+          position: absolute;
+          left: -20px;
         }
 
         .header__logo-sub:hover .submenu {

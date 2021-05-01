@@ -138,6 +138,9 @@ h6 {
 .rectangle__integration {
   padding-top: 50px;
 }
+.rectangle__integration .description__method {
+  font-style: italic;
+}
 .rectangle__integration .title_rec {
   display: flex;
   justify-content: center;
@@ -216,7 +219,7 @@ h6 {
   margin-right: 10px;
   max-width: 130px;
   text-align: center;
-  color: #99b1a9;
+  color: #a12f2f;
 }
 .navigation .navigation__menu .footer__menu .footer-item::after {
   content: "";

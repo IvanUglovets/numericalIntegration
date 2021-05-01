@@ -150,6 +150,9 @@ h6 {
 }
 
 .rectangle__integration {
+  .description__method {
+    font-style: italic;
+  }
   padding-top: 50px;
   .title_rec {
     display: flex;
@@ -230,7 +233,7 @@ h6 {
         margin-right: 10px;
         max-width: 130px;
         text-align: center;
-        color: rgb(153, 177, 169);
+        color: rgb(161, 47, 47);
       }
       .footer-item::after {
         content: "";
