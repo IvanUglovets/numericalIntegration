@@ -16,7 +16,38 @@
     <h1 class="title">Метод Симпсона</h1>
     <aside class="wrapper">
       <a href="index.html" class="trap__demo">На главную</a>
+      <a href="rectDemo.html" class="trap__demo">Демонстрация метода ЦП</a>
+      <a href="trapDemo.html" class="trap__demo"
+        >Демонстрация метода трапеций</a
+      >
     </aside>
+    <div class="radio">
+      <label for="sin(x)" class="radioBtn">
+        <input
+          type="radio"
+          name="sin(x)"
+          class="radio__sin"
+          value="sin(x)"
+          id="sin(x)"
+          checked="checked"
+        />
+        sin(x)
+      </label>
+      <label for="exp(-x)" class="radioBtn">
+        <input
+          type="radio"
+          name="sin(x)"
+          class="radio__exp"
+          value="exp(-x)"
+          id="exp(-x)"
+        />
+        exp(-x)
+      </label>
+      <label for="-x" class="radioBtn">
+        <input type="radio" name="sin(x)" class="radio__x" value="-x" id="-x" />
+        -x
+      </label>
+    </div>
     <script src="js/p5.js"></script>
     <script src="js/p5.dom.js"></script>
     <script src="js/simpsonDemo.js"></script>

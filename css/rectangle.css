@@ -37,6 +37,16 @@ h6 {
   padding-left: 20px;
 }
 
+img {
+  position: relative;
+}
+
+.number__formula {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .header {
   background-color: #4067b7;
   position: fixed;
@@ -166,7 +176,7 @@ h6 {
 .rectangle__integration .img__cp-item {
   font-style: italic;
   font-size: 14px;
-  margin-top: -10px;
+  margin-top: -6px;
   margin-bottom: 40px;
 }
 .rectangle__integration .left__rigth {
@@ -175,10 +185,11 @@ h6 {
 .rectangle__integration .left__rigth .or__text {
   position: absolute;
   top: 35%;
+  margin-left: 50px;
 }
 .rectangle__integration .left__rigth .right {
   display: inline-block;
-  margin-left: 30px;
+  margin-left: 110px;
 }
 .rectangle__integration .img__left-right {
   position: relative;

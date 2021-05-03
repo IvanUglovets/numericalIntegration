@@ -1,10 +1,33 @@
 "use strict";
+const radioSinus = document.querySelector(".radio__sin");
+const radioExp = document.querySelector(".radio__exp");
+const radioX = document.querySelector(".radio__x");
+const radioAll = document.querySelectorAll("input");
+
 const HEIGHT = window.innerHeight;
 const WIDTH = window.innerWidth;
 const unitX = Math.PI / 2;
 const unitY = 1;
 
-let func = (x) => Math.sin(x);
+function func(x) {
+  if (radioSinus.checked) {
+    return Math.sin(x);
+  }
+  if (radioExp.checked) {
+    return Math.exp(-x);
+  }
+  if (radioX.checked) {
+    return -x;
+  }
+}
+
+function reloadScript(url) {
+  let script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = url;
+  document.body.appendChild(script);
+}
+reloadScript("js/simpsonDemo.js", n);
 
 const slider = {};
 const buff = {};

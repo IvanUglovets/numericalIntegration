@@ -27,7 +27,7 @@ h6 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   position: absolute;
   top: 20%;
   left: 1%;
@@ -37,21 +37,22 @@ h6 {
   display: block;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  border: 1px solid black;
   padding: 5px 10px;
   color: black;
-  border-radius: 5px;
 }
 .wrapper .trap__demo:hover {
-  background-color: #302e2e;
-  color: #f7f7f7;
   transition: all 0.3s ease;
+  border-bottom: 1px solid #302e2e;
 }
 
 .radio {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 3%;
-  left: 26%;
+  top: 2%;
+  left: 15%;
+}
+.radio .radioBtn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }

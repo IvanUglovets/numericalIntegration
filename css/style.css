@@ -121,7 +121,7 @@ h6 {
 }
 .header__inner .submenu__theory {
   position: absolute;
-  left: -20px;
+  left: -12%;
 }
 .header__inner .header__logo-sub:hover .submenu {
   pointer-events: auto;

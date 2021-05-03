@@ -1,7 +1,8 @@
 "use strict";
-const radioSin = document.querySelector(".radio__sin");
+const radioSinus = document.querySelector(".radio__sin");
 const radioExp = document.querySelector(".radio__exp");
 const radioX = document.querySelector(".radio__x");
+const radioAll = document.querySelectorAll("input");
 
 const HEIGHT = window.innerHeight;
 const WIDTH = window.innerWidth;
@@ -9,7 +10,7 @@ const unitX = Math.PI / 2;
 const unitY = 1;
 
 function func(x) {
-  if (radioSin.checked) {
+  if (radioSinus.checked) {
     return Math.sin(x);
   }
   if (radioExp.checked) {
@@ -20,6 +21,14 @@ function func(x) {
   }
 }
 
+function reloadScript(url) {
+  let script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = url;
+  document.body.appendChild(script);
+}
+reloadScript("js/rectDemo.js");
+
 const slider = {};
 const buff = {};
 
@@ -28,15 +37,15 @@ function setup() {
 
   background("#eee");
 
-  slider.zoom = createSlider(1, 150, 150);
+  slider.zoom = createSlider(1, 150, 100);
   slider.a = createSlider(-100, 100, -15);
   slider.b = createSlider(-100, 100, 20);
   slider.n = createSlider(1, 30, 4);
 
-  slider.zoom.position(20, 20);
-  slider.a.position(20, 50);
-  slider.b.position(20, 80);
-  slider.n.position(20, 110);
+  slider.zoom.position(20, 50);
+  slider.a.position(20, 80);
+  slider.b.position(20, 110);
+  slider.n.position(20, 140);
 }
 
 function draw() {
@@ -53,11 +62,6 @@ function draw() {
 
     printGraph(zoom, a, b, n);
   }
-
-  fill("#fff");
-  rect(WIDTH - 65, HEIGHT - 15, 65, -20);
-  fill("#000");
-  text(Math.round(frameRate()) + " FPS", WIDTH - 60, HEIGHT - 20);
 }
 
 function printGraph(zoom, a, b, n) {
@@ -154,12 +158,12 @@ function printGraph(zoom, a, b, n) {
   translate(-WIDTH / 2, -HEIGHT / 2);
   stroke("transparent");
   fill(0);
-  text("zoom:" + zoom + "%", slider.zoom.x * 2 + slider.zoom.width, 30);
-  text("a: " + a, slider.a.x * 2 + slider.a.width, 60);
-  text("b: " + b, slider.b.x * 2 + slider.b.width, 90);
-  text("n: " + n, slider.n.x * 2 + slider.n.width, 120);
+  text("zoom:" + zoom + "%", slider.zoom.x * 2 + slider.zoom.width, 60);
+  text("a: " + a, slider.a.x * 2 + slider.a.width, 90);
+  text("b: " + b, slider.b.x * 2 + slider.b.width, 120);
+  text("n: " + n, slider.n.x * 2 + slider.n.width, 150);
   beginShape();
   textSize(18);
-  text("∫y(x)dx = " + area.toPrecision(8), 22, 150);
+  text("∫y(x)dx = " + area.toPrecision(8), 22, 35);
   endShape();
 }

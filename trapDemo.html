@@ -1,21 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Демонстрация метода трапеций</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/trapDemo.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Playfair+Display:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/trapDemo.css" />
+  </head>
+  <body>
     <h1 class="title">Метод трапеций</h1>
     <aside class="wrapper">
-        <a href="index.html" class="trap__demo">На главную</a>
+      <a href="index.html" class="trap__demo">На главную</a>
+      <a href="rectDemo.html" class="trap__demo">Демонстрация метода ЦП</a>
+      <a href="simpsonDemo.html" class="trap__demo"
+        >Демонстрация метода Симпсона</a
+      >
     </aside>
+    <div class="radio">
+      <label for="sin(x)" class="radioBtn">
+        <input
+          type="radio"
+          name="sin(x)"
+          class="radio__sin"
+          value="sin(x)"
+          id="sin(x)"
+          checked="checked"
+        />
+        sin(x)
+      </label>
+      <label for="exp(-x)" class="radioBtn">
+        <input
+          type="radio"
+          name="sin(x)"
+          class="radio__exp"
+          value="exp(-x)"
+          id="exp(-x)"
+        />
+        exp(-x)
+      </label>
+      <label for="-x" class="radioBtn">
+        <input type="radio" name="sin(x)" class="radio__x" value="-x" id="-x" />
+        -x
+      </label>
+    </div>
     <script src="js/p5.js"></script>
     <script src="js/p5.dom.js"></script>
     <script src="js/trapDemo.js"></script>
-</body>
+  </body>
 </html>

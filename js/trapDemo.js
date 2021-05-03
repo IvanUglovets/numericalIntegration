@@ -1,10 +1,34 @@
 "use strict";
+const radioSinus = document.querySelector(".radio__sin");
+const radioExp = document.querySelector(".radio__exp");
+const radioX = document.querySelector(".radio__x");
+const radioAll = document.querySelectorAll("input");
+
 const HEIGHT = window.innerHeight;
 const WIDTH = window.innerWidth;
 const unitX = Math.PI / 2;
 const unitY = 1;
 
-let func = (x) => Math.sin(x);
+function func(x) {
+  if (radioSinus.checked) {
+    return Math.sin(x);
+  }
+  if (radioExp.checked) {
+    return Math.exp(-x);
+  }
+  if (radioX.checked) {
+    return -x;
+  }
+}
+
+function reloadScript(url) {
+  let script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = url;
+  document.body.appendChild(script);
+}
+
+reloadScript("js/trapDemo.js");
 
 const slider = {};
 const buff = {};
@@ -13,7 +37,7 @@ function setup() {
   createCanvas(WIDTH, HEIGHT);
   background("#eee");
   function initializationSlider() {
-    slider.zoom = createSlider(1, 150, 150);
+    slider.zoom = createSlider(1, 150, 100);
     slider.a = createSlider(-100, 100, -15);
     slider.b = createSlider(-100, 100, 20);
     slider.n = createSlider(1, 30, 4);

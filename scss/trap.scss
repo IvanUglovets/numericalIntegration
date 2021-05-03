@@ -36,8 +36,13 @@ img {
   //position: absolute;
   margin: 0;
   padding: 0;
+  position: relative;
 }
-
+.number__formula {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+}
 h1,
 h2,
 h3,

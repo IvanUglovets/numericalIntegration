@@ -30,6 +30,16 @@ h6 {
   padding: 0;
 }
 
+img {
+  position: relative;
+}
+
+.number__formula {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;

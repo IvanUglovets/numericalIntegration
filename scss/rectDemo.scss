@@ -32,7 +32,7 @@ h6 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   position: absolute;
   top: 20%;
   left: 1%;
@@ -41,16 +41,13 @@ h6 {
     display: block;
     font-family: $font2;
     font-size: 16px;
-    border: 1px solid black;
     padding: 5px 10px;
     color: black;
-    border-radius: 5px;
   }
 
   .trap__demo:hover {
-    background-color: rgb(48, 46, 46);
-    color: $primary;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgb(48, 46, 46);
   }
 }
 
@@ -58,6 +55,10 @@ h6 {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 3%;
-  left: 26%;
+  top: 2%;
+  left: 15%;
+  .radioBtn {
+    font-family: $font1;
+    font-size: 18px;
+  }
 }
