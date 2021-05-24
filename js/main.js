@@ -11,7 +11,7 @@ const calculateTools = document.querySelector(".title__input");
 const calculateList = document.querySelector(".calculate__list");
 const linkUp = document.querySelector(".link__up");
 const delta = document.querySelector(".delta");
-
+document.getElementsByClassName;
 window.addEventListener("scroll", () => {
   if (this.scrollY > 100) {
     linkUp.classList.add("link__up-active");
@@ -20,17 +20,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// calculateTools.addEventListener("click", () => {
-//   if (calculateList.classList.contains("active__accordion")) {
-//     calculateList.classList.remove("active__accordion");
-//     calculateTools.classList.remove("title__after");
-//   } else {
-//     calculateList.classList.add("active__accordion");
-//     calculateTools.classList.add("title__after");
-//   }
-// });
-
-// delete MAth
 function takeAwayMath() {
   let math_methods = Object.getOwnPropertyNames(Math);
   for (let i in math_methods) {
@@ -73,7 +62,6 @@ const centralRectangle = () => {
   }
 
   const result = absDelta();
-  console.log(result[0]);
   integralRectangle.innerHTML = `Метод ЦП:  ${result[0].toFixed(
     8
   )} Погрешность: ${result[1].toFixed(8)}`;

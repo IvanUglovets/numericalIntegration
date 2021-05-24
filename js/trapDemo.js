@@ -65,10 +65,10 @@ function draw() {
     printGraph(zoom, a, b, n);
   }
 
-  fill("#fff");
-  rect(WIDTH - 65, HEIGHT - 15, 65, -20);
-  fill("blue");
-  text(Math.round(frameRate()) + " FPS", WIDTH - 60, HEIGHT - 20);
+  // fill("#fff");
+  // rect(WIDTH - 65, HEIGHT - 15, 65, -20);
+  // fill("blue");
+  // text(Math.round(frameRate()) + " FPS", WIDTH - 60, HEIGHT - 20);
 }
 
 function printGraph(zoom, a, b, n) {

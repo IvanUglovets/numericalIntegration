@@ -27,7 +27,7 @@ function reloadScript(url) {
   script.src = url;
   document.body.appendChild(script);
 }
-reloadScript("js/simpsonDemo.js", n);
+reloadScript("js/simpsonDemo.js");
 
 const slider = {};
 const buff = {};
@@ -157,8 +157,6 @@ function printGraph(zoom, a, b, n) {
   for (let i = 0, sign = 1; i < n; i++, sign *= -1) {
     let x0 = a + i * dx;
     let x1 = a + (i + 1) * dx;
-    // let x2 = a + (i - 2) * dx;
-    //console.log(x2);
 
     sum += (3 + sign) * func(x0);
 
@@ -167,8 +165,6 @@ function printGraph(zoom, a, b, n) {
     beginShape();
     vertex(x0 * zoom, 0);
     vertex(x1 * zoom, 0);
-    // vertex(x2 * zoom, 0);
-    //vertex(x2 * zoom, -func(x2) * zoom);
     vertex(x1 * zoom, -func(x1) * zoom);
     vertex(x0 * zoom, -func(x0) * zoom);
     endShape();
